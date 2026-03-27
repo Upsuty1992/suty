@@ -1,13 +1,137 @@
-<Doctype html>
-<html>
-    <head>
-    <title>My portfolio</title> 
-    <link rel="stylesheet" ref="style.css">
+<!Doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<title>sign up form</title>
+
+<!--Google font-->
+<link
+href="https://font.googleapis.com/css2?family=poppins:wght@400:500:600:700&
+display=swap" rel="stylesheet">
+
+<style>
+    *{
+        margin: 0;
+        padding: o;
+        box-sizing: border-box;
+    }
+body {
+    font-family: 'poppins',sans-serif;
+    font-size: 16px;
+    background-color: hsl(0, 100%,74%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+align-items: center;
+padding: 20px;
+}
+container {
+    display: flex;
+    gap: 50px;
+    max-width: 1100px;
+    width: 100%;
+}
+/* LEFT SIDE */
+.left {
+    flex: 1;
+color: white;
+}
+.left h1 {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+.left p {
+    font-weight: 400;
+}
+/*RIGHT SIDE*/
+:right {
+    flex: 1;
+}
+.offer {
+background-color: hsl(248,32%,49);
+color: white;
+text-align: center;
+padding: 15px;
+border-radius: 8px;
+margin-bottom: 20px;
+font-weight: 500;
+}
+.form-card {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0,2);
+}
+input {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid hsl(246, 25%, 77%);
+    border-radius: 5px;
+    font-weight: 600;
+}
+input :focus {
+    outline: none;
+    border-color: hsl(249,10%,26%);
+}
+button {
+    width: 100%;
+    padding: 15px;
+    background-color: hsl(154,59%,51%);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+button:hover {
+    opacity: 0.9;
+}
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .left h1 {
+        font-size: 28px;
+    }
+}
+</style>
 </head>
 <body>
-    <h1>Hello I am Daniel</h1>
-    <p>I am a beginner web developer</p>
-    <button onclick="showmessage()">Click me</button>
-    <script src="script.js"></script>
+    <div class="container">
+        <!--LEFT SECTION-->
+        <div class="left">
+            <h1>Learn to code by watching others</h1>
+            <P>
+                see how experienced developers solve problems in real-time. watching tutorials is great, but understanding how developers think is better.
+            </P>
+        </div>
+        <!--RIGHT SECTION-->
+        <div class="right">
+
+            <div class="offer">
+            Try it free 7 days then $20/month
+        </div>
+        <div class="form form-card">
+            <form>
+                <input type="text"
+                placeholder="First Name" required>
+                <input type="text"
+                placeholder="Last Name" required>
+                <input type="email"
+                placeholder="Email Address" required>
+                <input type="password"
+                placeholder="password" required>
+                <button
+                type="submit">claim your free trial</button>
+            </form>
+        </div>
+        </div>
+    </div>
 </body>
 </html>
